@@ -1,6 +1,6 @@
 {
   "name": "ci-relay",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiny CI status aggregation service built on top of ci-adapter and ci-router",
   "keywords": [
     "ci",
