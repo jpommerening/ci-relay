@@ -32,7 +32,7 @@ Once the configuration and dependencies are in place, just type:
 $ npm start
 ```
 
-_That's it!_  Your CI API should now be running on http://localhost:3100 (or the port
+_That's it!_  Your CI API should now be running on [http://localhost:3100](http://localhost:3100) (or the port
 you specified in your configuration).
 
 [ci-adapter]: https://github.com/jpommerening/ci-adapter
