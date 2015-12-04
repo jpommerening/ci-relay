@@ -1,37 +1,15 @@
-var express = require('express');
-var app = express();
-
+var app = require('./index');
 var config = require('./config.json');
 
-var ci = require('ci-adapter');
-var router = require('ci-router');
+var port = config.port || process.env.PORT || 3100;
+var host = config.host || process.env.HOST || null;
 
-var types = {
-  'buildbot': ci.Buildbot,
-  'jenkins': ci.Jenkins,
-  'travis': ci.Travis
-};
+function callback() {
+  var address = server.address();
+  var host = address.address;
+  var port = address.port;
+  console.log('Listening at http://%s:%s', host, port);
+}
 
-config.routes.forEach(function (route) {
-  var adapters = route.adapters.map(function (options) {
-    console.log('Connecting to ' + options.type + ' instance at ' + options.url);
-    return types[options.type](options.url, options.options);
-  });
-  var combined = adapters.length > 1 ? ci.combine.apply(null, adapters) : adapters[0];
-  var cached = ci.cache(combined, config.cache);
-
-  app.use(route.route, router.default(cached));
-});
-
-var options = [
-  config.port || process.env.PORT || 3100,
-  config.host || process.env.HOST || 'localhost',
-  function() {
-    var address = server.address();
-    var host = address.address;
-    var port = address.port;
-    console.log('Listening at http://%s:%s', host, port);
-  }
-];
-
-var server = app.listen.apply(app, options);
+var server = app.config(config)
+                .listen(port, host, callback);

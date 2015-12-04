@@ -2,7 +2,6 @@
   "name": "ci-relay",
   "version": "0.1.0",
   "description": "Tiny CI status aggregation service built on top of ci-adapter and ci-router",
-  "main": "server.js",
   "keywords": [
     "ci",
     "buildbot",
