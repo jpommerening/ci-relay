@@ -1,0 +1,21 @@
+{
+  "name": "ci-relay",
+  "version": "0.1.0",
+  "description": "HTTP API to multiple CI servers",
+  "main": "server.js",
+  "keywords": [
+    "ci",
+    "buildbot",
+    "travis",
+    "jenkis",
+    "status"
+  ],
+  "author": "Jonas Pommerening",
+  "license": "MIT",
+  "dependencies": {
+    "ci-adapter": "^0.1.0",
+    "ci-router": "^0.1.0",
+    "compression": "^1.6.0",
+    "express": "^4.13.3"
+  }
+}
