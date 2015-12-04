@@ -15,6 +15,10 @@ $ npm install
 Have a look at the [`config-example.json`](config-example.json) file. Copy it
 to `config.json` and replace the defaults with something meaningful.
 
+If left blank, the `port` and `host` configuration options will use the
+`$PORT` and `$HOST` environment variables, defaulting to `localhost:3100`
+if unspecified.
+
 The example configuration serves the CI status of:
 
 - [Buildbot](http://buildbot.buildbot.net) on `/buildbot`

@@ -1,6 +1,6 @@
 {
-  "host": "*",
-  "port": 3100,
+  "host": null,
+  "port": null,
   "cache": {
     "size": 30,
     "maxAge": 10000

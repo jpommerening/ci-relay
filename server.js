@@ -23,11 +23,15 @@ config.routes.forEach(function (route) {
   app.use(route.route, router.default(cached));
 });
 
-var server = app.listen(config.port, function() {
-  var address = server.address();
-  var host = address.address;
-  var port = address.port;
+var options = [
+  config.port || process.env.PORT || 3100,
+  config.host || process.env.HOST || 'localhost',
+  function() {
+    var address = server.address();
+    var host = address.address;
+    var port = address.port;
+    console.log('Listening at http://%s:%s', host, port);
+  }
+];
 
-  console.log('Listening at http://%s:%s', host, port);
-});
-
+var server = app.listen.apply(app, options);
