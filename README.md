@@ -1,6 +1,6 @@
 # ci-relay
 
-> Tiny CI status aggregation service built in [ci-adapter][] and [ci-router][]
+> Tiny CI status aggregation service built on top of [ci-adapter][] and [ci-router][]
 
 ## Install
 

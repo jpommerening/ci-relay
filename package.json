@@ -1,7 +1,7 @@
 {
   "name": "ci-relay",
   "version": "0.1.0",
-  "description": "HTTP API to multiple CI servers",
+  "description": "Tiny CI status aggregation service built on top of ci-adapter and ci-router",
   "main": "server.js",
   "keywords": [
     "ci",
@@ -13,9 +13,8 @@
   "author": "Jonas Pommerening",
   "license": "MIT",
   "dependencies": {
-    "ci-adapter": "^0.1.0",
-    "ci-router": "^0.1.0",
-    "compression": "^1.6.0",
+    "ci-adapter": "^0.1.2",
+    "ci-router": "^0.1.2",
     "express": "^4.13.3"
   }
 }
