@@ -12,7 +12,7 @@ $ npm install
 
 ## Setup
 
-Have a look at the [`config-example.json`](config-example.json`) file. Copy it
+Have a look at the [`config-example.json`](config-example.json) file. Copy it
 to `config.json` and replace the defaults with something meaningful.
 
 The default example configuration serves the CI status of:
