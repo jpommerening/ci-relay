@@ -1,7 +1,7 @@
 var ci = require('ci-adapter');
 var router = require('ci-router');
-var express = require('express');
-var app = module.exports = express();
+var connect = require('connect');
+var app = module.exports = connect();
 
 var types = {
   'buildbot': ci.Buildbot,
@@ -18,7 +18,7 @@ app.config = function (config) {
       return types[options.type](options.url, options.options);
     });
     var combined = adapters.length > 1 ? ci.combine.apply(null, adapters) : adapters[0];
-    var cached = ci.cache(combined, config.cache);
+    var cached = ci.cache(combined, config.cache)
 
     app.use(route.route, router(cached));
   });

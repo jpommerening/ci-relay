@@ -12,8 +12,8 @@
   "author": "Jonas Pommerening",
   "license": "MIT",
   "dependencies": {
-    "ci-adapter": "^0.1.2",
-    "ci-router": "^0.1.2",
-    "express": "^4.13.3"
+    "ci-adapter": "^0.2.0",
+    "ci-router": "^0.2.0",
+    "connect": "^3.4.0"
   }
 }
