@@ -1,6 +1,6 @@
 {
   "name": "ci-relay",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Tiny CI status aggregation service built on top of ci-adapter and ci-router",
   "keywords": [
     "ci",
@@ -12,8 +12,8 @@
   "author": "Jonas Pommerening",
   "license": "MIT",
   "dependencies": {
-    "ci-adapter": "^0.2.0",
-    "ci-router": "^0.2.0",
+    "ci-adapter": "^0.2.1",
+    "ci-router": "^0.2.1",
     "connect": "^3.4.0"
   }
 }

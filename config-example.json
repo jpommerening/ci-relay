@@ -11,7 +11,10 @@
       "adapters": [
         {
           "type": "buildbot",
-          "url": "http://buildbot.buildbot.net"
+          "url": "http://buildbot.buildbot.net",
+          "options": {
+            "tag": "config"
+          }
         }
       ]
     },
