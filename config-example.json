@@ -40,7 +40,10 @@
             "account": "travis-ci"
           }
         }
-      ]
+      ],
+      "filter": {
+        "exclude": [ { "name": "canary" } ]
+      }
     }
   ]
 }

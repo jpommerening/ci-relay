@@ -19,8 +19,9 @@ app.config = function (config) {
     });
     var combined = adapters.length > 1 ? ci.combine.apply(null, adapters) : adapters[0];
     var cached = ci.cache(combined, config.cache)
+    var filtered = route.filter ? ci.filter(cached, route.filter) : cached;
 
-    app.use(route.route, router(cached));
+    app.use(route.route, router(filtered));
   });
 
   return this;
